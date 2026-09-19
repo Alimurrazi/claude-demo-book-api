@@ -52,8 +52,12 @@ while IFS= read -r file; do
 done <<< "$changed_files"
 
 if [ "${#missing_tests[@]}" -gt 0 ]; then
-  echo "Blocked: these changed files have no matching test file in this push:"
-  printf '  - %s\n' "${missing_tests[@]}"
+  # On exit 2, Claude Code only relays stderr back as the block reason, so
+  # the message must go there, not stdout, or it arrives blank.
+  {
+    echo "Blocked: these changed files have no matching test file in this push:"
+    printf '  - %s\n' "${missing_tests[@]}"
+  } >&2
   # Exit 2 is Claude Code's PreToolUse "blocking" exit code: it stops the
   # tool call and feeds this message back to Claude. Exit 1 would only show
   # a warning and let the push proceed anyway.
