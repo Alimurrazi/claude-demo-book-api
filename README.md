@@ -16,8 +16,9 @@ Later articles in the series add to this same project (hooks, then MCP), rather 
 ## Article series
 
 1. [Agents and Skills in Claude Code: A Beginner's Guide](https://dev.to/alimurrazi/agents-and-skills-in-claude-code-a-beginners-guide-24hk)
-2. Hooks in Claude Code — *coming soon*
-3. MCP in Claude Code — *coming soon*
+2. [Permissions & Tool Allowlisting in Claude Code: A Beginner's Guide](https://dev.to/alimurrazi/permissions-tool-allowlisting-in-claude-code-a-beginners-guide-592i)
+3. [Hooks in Claude Code: A Beginner's Guide](https://dev.to/alimurrazi/hooks-in-claude-code-a-beginners-guide-5bae)
+4. MCP in Claude Code — *coming soon*
 
 ## Running it
 
